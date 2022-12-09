@@ -6,14 +6,14 @@ pipeline {
     } 
 
     environment {
-        SNAP_REPO = 'v-snapshot'
+        SNAP_REPO = 'v_snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin123'
-        RELEASE_REPO = 'v-artifact'
-        CENTRAL_REPO = 'v-maven-dependency'
-        NEXUSIP = '172.31.65.124'
+        RELEASE_REPO = 'v_artifact'
+        CENTRAL_REPO = 'v_maven_dependency'
+        NEXUSIP = '172.31.0.180'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'v-group'
+        NEXUS_GRP_REPO = 'v_group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
