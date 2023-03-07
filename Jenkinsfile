@@ -7,18 +7,18 @@ pipeline {
     agent any
     tools {
         maven "maven3"
-        jdk "java8"
+        jdk "java1.8"
     } 
 
     environment {
-        SNAP_REPO = 'v_snapshot'
+        SNAP_REPO = 'maven-snap'
         NEXUS_USER = 'admin'
-        NEXUS_PASS = 'admin123'
-        RELEASE_REPO = 'v_artifact'
-        CENTRAL_REPO = 'v_maven_dependency'
-        NEXUSIP = '172.31.0.180'
+        NEXUS_PASS = 'admin'
+        RELEASE_REPO = 'artifact-repo'
+        CENTRAL_REPO = 'maven-dep'
+        NEXUSIP = '172.31.22.78'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'v_group'
+        NEXUS_GRP_REPO = 'maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
