@@ -11,14 +11,14 @@ pipeline {
     } 
 
     environment {
-        SNAP_REPO = 'maven-snap'
+        SNAP_REPO = 'artifact-snap'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'
-        RELEASE_REPO = 'artifact-repo'
+        RELEASE_REPO = 'maven-artifact'
         CENTRAL_REPO = 'maven-dep'
-        NEXUSIP = '172.31.22.78'
+        NEXUSIP = '172.31.27.85'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'maven-group'
+        NEXUS_GRP_REPO = 'test-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
