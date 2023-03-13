@@ -11,14 +11,14 @@ pipeline {
     } 
 
     environment {
-        SNAP_REPO = 'artifact-snap'
+        SNAP_REPO = 'maven-snapshot'
         NEXUS_USER = 'admin'
         NEXUS_PASS = 'admin'
         RELEASE_REPO = 'maven-artifact'
-        CENTRAL_REPO = 'maven-dep'
-        NEXUSIP = '172.31.27.85'
+        CENTRAL_REPO = 'maven-dependent'
+        NEXUSIP = '172.31.30.130'
         NEXUSPORT = '8081'
-        NEXUS_GRP_REPO = 'test-group'
+        NEXUS_GRP_REPO = 'maven-group'
         NEXUS_LOGIN = 'nexuslogin'
         SONARSERVER = 'sonarserver'
         SONARSCANNER = 'sonarscanner'
@@ -81,7 +81,7 @@ pipeline {
                  repository: "${RELEASE_REPO}",
                  credentialsId: "${NEXUS_LOGIN}",
            artifacts: [
-                 [artifactId: 'v_pro_artifact',
+                 [artifactId: 'v-artifact',
                   classifier: '',
                   file: 'target/vprofile-v2.war',
                   type: 'war']
