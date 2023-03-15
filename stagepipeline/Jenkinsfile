@@ -101,6 +101,17 @@ pipeline {
             }
         }
 
+        stage('upload app image'){
+            steps {
+                script {
+                    docker.withRegistry( testConRegistry, registryCrendential ) {
+                        dockerImage.push("$BUILD_NUMBER")
+                        dockerImage.push("latest")
+                    }
+                }
+            }
+        }
+
         
     }
     post {
